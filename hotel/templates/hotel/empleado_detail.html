@@ -1,0 +1,10 @@
+{% extends 'hotel/base.html' %}
+
+{% block content %}
+
+<a class="btn btn-default" href="{% url 'empleado_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+<a class="btn btn-default" href="{% url 'empleado_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+
+<h1>{{ post.nombre }}</h1>
+<p>{{ post.dpi|linebreaksbr }}</p>
+{% endblock %}
